@@ -150,7 +150,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 0
   isPolluted: 0
-  isFlamable: 0
+  isFlamable: 1
+  isStackable: 0
   isEmpty: 1
   particlePrefab: {fileID: 7758999282732778041, guid: aeb9a2a6f10a31645b25ad47b95d4ee5, type: 3}
   pollutionGeneration: 2

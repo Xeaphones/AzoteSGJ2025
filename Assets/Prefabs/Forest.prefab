@@ -150,7 +150,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 0
   isPolluted: 0
-  isFlamable: 0
+  isFlamable: 1
+  isStackable: 0
   isEmpty: 1
   onFire: 0
 --- !u!50 &-2805617612149410074
