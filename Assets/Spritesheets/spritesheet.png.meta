@@ -591,8 +591,8 @@ TextureImporter:
       name: spritesheet_19
       rect:
         serializedVersion: 2
-        x: 0
-        y: 416
+        x: 256
+        y: 448
         width: 32
         height: 32
       alignment: 9
@@ -613,7 +613,7 @@ TextureImporter:
       name: spritesheet_20
       rect:
         serializedVersion: 2
-        x: 32
+        x: 0
         y: 416
         width: 32
         height: 32
@@ -635,7 +635,7 @@ TextureImporter:
       name: spritesheet_21
       rect:
         serializedVersion: 2
-        x: 64
+        x: 32
         y: 416
         width: 32
         height: 32
@@ -657,7 +657,7 @@ TextureImporter:
       name: spritesheet_22
       rect:
         serializedVersion: 2
-        x: 96
+        x: 64
         y: 416
         width: 32
         height: 32
@@ -679,7 +679,7 @@ TextureImporter:
       name: spritesheet_23
       rect:
         serializedVersion: 2
-        x: 128
+        x: 96
         y: 416
         width: 32
         height: 32
@@ -701,7 +701,7 @@ TextureImporter:
       name: spritesheet_24
       rect:
         serializedVersion: 2
-        x: 160
+        x: 128
         y: 416
         width: 32
         height: 32
@@ -723,7 +723,7 @@ TextureImporter:
       name: spritesheet_25
       rect:
         serializedVersion: 2
-        x: 192
+        x: 160
         y: 416
         width: 32
         height: 32
@@ -745,7 +745,7 @@ TextureImporter:
       name: spritesheet_26
       rect:
         serializedVersion: 2
-        x: 224
+        x: 192
         y: 416
         width: 32
         height: 32
@@ -767,8 +767,8 @@ TextureImporter:
       name: spritesheet_27
       rect:
         serializedVersion: 2
-        x: 64
-        y: 384
+        x: 224
+        y: 416
         width: 32
         height: 32
       alignment: 9
@@ -789,8 +789,8 @@ TextureImporter:
       name: spritesheet_28
       rect:
         serializedVersion: 2
-        x: 160
-        y: 384
+        x: 256
+        y: 416
         width: 32
         height: 32
       alignment: 9
@@ -811,7 +811,7 @@ TextureImporter:
       name: spritesheet_29
       rect:
         serializedVersion: 2
-        x: 192
+        x: 64
         y: 384
         width: 32
         height: 32
@@ -833,8 +833,8 @@ TextureImporter:
       name: spritesheet_30
       rect:
         serializedVersion: 2
-        x: 64
-        y: 352
+        x: 160
+        y: 384
         width: 32
         height: 32
       alignment: 9
@@ -847,6 +847,50 @@ TextureImporter:
       bones: []
       spriteID: 609f8a010e0d1afe68c52fb2e13fb3b9
       internalID: 1919233038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_31
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 384
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af1926efb31d60a53865d87c25d84374
+      internalID: 597742892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_32
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 352
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f09233dab9ab0d1cca7d64c6be99bff8
+      internalID: -82437969
       vertices: []
       indices: 
       edges: []
@@ -890,6 +934,8 @@ TextureImporter:
       spritesheet_29: 1202832503
       spritesheet_3: -5962389079421231736
       spritesheet_30: 1919233038
+      spritesheet_31: 597742892
+      spritesheet_32: -82437969
       spritesheet_4: 2788568348960109317
       spritesheet_5: 226702753830753226
       spritesheet_6: -7921052967969465774
