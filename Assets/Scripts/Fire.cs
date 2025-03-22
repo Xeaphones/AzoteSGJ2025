@@ -3,13 +3,13 @@ using UnityEngine;
 
 public class Fire : PollutingUnit
 {
-    [SerializeField] public float duration;
-    private Unit unit;
+    [SerializeField] public float duration = 20;
+    private Unit source;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     
-    public void OnCreation(Unit previousUnit)
+    public void OnCreation(Unit unit)
     {
-        unit = previousUnit;
+        source = unit;
     }
 
     void Start()
@@ -22,7 +22,9 @@ public class Fire : PollutingUnit
         base.Update();
         if (duration <= 0)
         {
+            Destroy(source);
             Destroy(gameObject);
+            Debug.Log("Fire deleted");
         }
         else
         {
