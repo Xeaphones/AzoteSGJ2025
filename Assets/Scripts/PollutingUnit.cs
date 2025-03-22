@@ -3,10 +3,11 @@ using UnityEngine.InputSystem.Controls;
 
 public abstract class PollutingUnit : Unit
 {
-    public int pollutionGeneration;
-    public float pollutionMultiplier;
-    public int ticsBeforePollution;
-    protected float timer;
+    [SerializeField] GameObject particlePrefab;
+    [SerializeField] public int pollutionGeneration;
+    [SerializeField] public float pollutionMultiplier;
+    [SerializeField] public int ticsBeforePollution;
+    private float timer = 0;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -15,18 +16,26 @@ public abstract class PollutingUnit : Unit
     }
 
     // Update is called once per frame
-    void Update()
+    protected void Update()
     {
         if (timer >= ticsBeforePollution) 
         {
             timer = 0;
-            // A RAJOUTER : 
-            // créée une instance d'ammoniac
+            for (int i = 0 ; i < pollutionGeneration ; i++)
+            {
+                CreateParticle();
+            }
         }
         else 
         {
             timer += pollutionMultiplier * Time.deltaTime ;
         }
+    }
 
+    void CreateParticle()
+    {
+        GameObject newParcticle = Instantiate (particlePrefab, transform.position, transform.rotation);
+        Particle particleScript = newParcticle.GetComponent<Particle>();
+        particleScript.OnCreation();
     }
 }

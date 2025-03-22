@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 6486007455772792388}
   - component: {fileID: 3440174765283682524}
   - component: {fileID: 3196394876596387469}
-  - component: {fileID: 4413489895576611614}
+  - component: {fileID: 2652588980301711309}
+  - component: {fileID: 6089655699708274985}
   m_Layer: 0
   m_Name: RainCondensator
   m_TagString: Untagged
@@ -78,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2630129836624287915, guid: 21bb858438f5f24c7b4054ce59917407, type: 3}
+  m_Sprite: {fileID: -7676219313036738927, guid: 21bb858438f5f24c7b4054ce59917407, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -119,7 +120,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -133,9 +134,9 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 5, y: 5}
   m_EdgeRadius: 0
---- !u!114 &4413489895576611614
+--- !u!114 &2652588980301711309
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -151,6 +152,34 @@ MonoBehaviour:
   isPolluted: 0
   isFlamable: 0
   isEmpty: 1
-  effectZone: 0
-  ticsBeforeCleaning: 0
-  cleaningPower: 0
+  isActive: 0
+  timer: 0
+  activationTics: 5
+  collider: {fileID: 3196394876596387469}
+--- !u!50 &6089655699708274985
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7452438507494470998}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

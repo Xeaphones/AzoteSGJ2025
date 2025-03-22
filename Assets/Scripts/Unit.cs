@@ -4,10 +4,10 @@ using UnityEngine.InputSystem.Controls;
 
 public abstract class Unit : MonoBehaviour
 {
-    public float cost;
-    public bool isPolluted = false;
-    public bool isFlamable = false;
-    public bool isEmpty = true;
+    [SerializeField] public float cost;
+    [SerializeField] public bool isPolluted;
+    [SerializeField] public bool isFlamable;
+    [SerializeField] public bool isEmpty = true;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

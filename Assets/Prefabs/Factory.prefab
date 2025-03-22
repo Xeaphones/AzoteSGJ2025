@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 568082638791504146}
   - component: {fileID: 5174294059999232902}
   - component: {fileID: 7475415291000970269}
-  - component: {fileID: 8761131336926445839}
+  - component: {fileID: -767329927188786464}
   m_Layer: 0
   m_Name: Factory
   m_TagString: Untagged
@@ -135,7 +135,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &8761131336926445839
+--- !u!114 &-767329927188786464
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -151,6 +151,7 @@ MonoBehaviour:
   isPolluted: 0
   isFlamable: 0
   isEmpty: 1
-  pollutionGeneration: 0
-  pollutionMultiplier: 0
-  ticsBeforePollution: 0
+  particlePrefab: {fileID: 7758999282732778041, guid: aeb9a2a6f10a31645b25ad47b95d4ee5, type: 3}
+  pollutionGeneration: 1
+  pollutionMultiplier: 1
+  ticsBeforePollution: 5
