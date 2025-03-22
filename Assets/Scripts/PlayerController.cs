@@ -131,6 +131,5 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Not enough action points");
             Debug.Log(actionPts);
         }
-        
     }
 }
