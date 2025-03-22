@@ -1,12 +1,15 @@
 using UnityEngine;
 using UnityEngine.InputSystem.Controls;
+using System.Collections.Generic;
+using System.Linq;
 
 public abstract class CleaningUnit : Unit
 {
-    public int effectZone;
-    public int ticsBeforeCleaning;
-    public int cleaningPower;
-    protected float timer;
+//     [SerializeField] public int effectZone;
+//     [SerializeField] public int ticsBeforeCleaning;
+//     [SerializeField] public int cleaningPower;
+//     [SerializeField] private float timer;
+//     [SerializeField] List <GameObject> currentCollisions = new List <GameObject> ();
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -15,19 +18,19 @@ public abstract class CleaningUnit : Unit
     }
 
     // Update is called once per frame
-    void Update()
+    protected void Update()
     {
-        if (timer >= ticsBeforeCleaning) 
-        {
-            timer = 0;
-            // A RAJOUTER : 
-            // si il y a de l'ammoniac dans la range effectZone :
-            // delete autant que cleaningPower
-        }
-        else 
-        {
-            timer += Time.deltaTime ;
-        }
+        
+    }
 
+    void OnTriggerStay2D(Collider2D collision)
+    {
+        GameObject other = collision.gameObject;
+
+        if (collision.gameObject.GetComponent<Particle>())
+        {
+            Destroy(other);
+            Debug.Log("Ammoniac destroy");
+        }
     }
 }
