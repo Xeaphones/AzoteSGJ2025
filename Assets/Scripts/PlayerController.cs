@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
@@ -8,45 +9,43 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private Tilemap collisionTilemap;
 
+    private PlayerInput playerInput;
     [SerializeField]
-    private string player = "PlayerX";
-    private PlayerMovement controls;
+    private Vector3Int cursorPosition;
     
     void Awake()
     {
-        controls = new PlayerMovement();
+        playerInput = GetComponent<PlayerInput>();
+        playerInput.neverAutoSwitchControlSchemes = false;
+        
+        cursorPosition = groundTilemap.WorldToCell(transform.position);
+        transform.position = groundTilemap.GetCellCenterWorld(cursorPosition);
     }
 
-    void OnEnable()
+    void OnMovement(InputValue value)
     {
-        controls.Enable();
-    }
+        Vector2 direction = value.Get<Vector2>();
 
-    void OnDisable()
-    {
-        controls.Disable();
-    }
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        if (player == "Player1") {
-            controls.Player1.Movement.performed += ctx => Move(ctx.ReadValue<Vector2>());
-        } else if (player == "Player2") {
-            controls.Player2.Movement.performed += ctx => Move(ctx.ReadValue<Vector2>());
-        } else {
-            Debug.LogError("Player name is not valid");
+        var device = playerInput.devices.Count > 0 ? playerInput.devices[0] : null;
+        if (device is Gamepad gp)
+        {
+            // We can see the actual deviceId
+            Debug.Log($"Movement from Gamepad deviceId={gp.deviceId}");
         }
+
+        Move(direction);
     }
 
     private void Move(Vector2 direction) {
         if (CanMove(direction)) {
-            transform.position += (Vector3)direction;
+           cursorPosition += new Vector3Int((int)direction.x, (int)direction.y, 0);
+           transform.position = groundTilemap.GetCellCenterWorld(cursorPosition);            
+            
         }
     }
 
     private bool CanMove(Vector2 direction) {
-        Vector3Int gridPosition = groundTilemap.WorldToCell(transform.position + (Vector3)direction);
+        Vector3Int gridPosition = groundTilemap.WorldToCell(cursorPosition + new Vector3Int((int)direction.x, (int)direction.y, 0));
         if (!groundTilemap.HasTile(gridPosition) || collisionTilemap.HasTile(gridPosition)) {
             return false;
         }
