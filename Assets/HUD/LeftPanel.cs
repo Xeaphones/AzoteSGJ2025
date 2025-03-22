@@ -33,6 +33,8 @@ public class LeftPanel : MonoBehaviour
     
     public TextMeshProUGUI terrainText;
     public TextMeshProUGUI manetteText;
+    public TextMeshProUGUI terrainImage;
+    public TextMeshProUGUI manetteImage;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start() {
         
