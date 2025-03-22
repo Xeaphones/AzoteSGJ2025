@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class LeftPanel : MonoBehaviour
 {
@@ -33,33 +34,45 @@ public class LeftPanel : MonoBehaviour
     
     public TextMeshProUGUI terrainText;
     public TextMeshProUGUI manetteText;
-    public TextMeshProUGUI terrainImage;
-    public TextMeshProUGUI manetteImage;
+    // public TextMeshProUGUI terrainImage;
+    // public TextMeshProUGUI manetteImage;
+
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start() {
         
     }
+    
+    private int actionsPoints = 0;
+    private int maxActionsPoints = 10;
+    
+    public void AddActionPoints(int points) {
+        actionsPoints += points;
+    }
+    
+    public void RemoveActionPoints(int points) {
+        actionsPoints -= points;
+    }
 
     // Update is called once per frame
     private void Update() {
+        // Terrain et Manette informations
         if(infoManette.ContainsKey(indexManetteInfo)) {
             currentManetteInfo = infoManette[indexManetteInfo];
-        }
-        else
-        {
+        } else {
             currentManetteInfo = "";
         }
         
         if(infoTerrain.ContainsKey(indexTerrainInfo)) {
             currentTerrainInfo = infoTerrain[indexTerrainInfo];
-        }
-        else
-        {
+        } else {
             currentTerrainInfo = "";
         }
         
         terrainText.text = currentTerrainInfo;
         manetteText.text = currentManetteInfo;
+        
+        // Barre des points d'actions
         
         
     }
