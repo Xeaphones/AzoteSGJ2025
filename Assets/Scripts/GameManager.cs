@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -54,5 +55,19 @@ public class GameManager : MonoBehaviour
     {
         totalAmmoniac -= value;
         //Update display
+    }
+
+    // C la mousson lekipe
+    public void CleanAllAmmoniac()
+    {
+        Particle[] particles = FindObjectsByType<Particle>(FindObjectsSortMode.None);
+
+        foreach (Particle obj in particles)
+        {
+            Destroy(obj);
+        }
+
+        totalAmmoniac = 0;
+        
     }
 }
