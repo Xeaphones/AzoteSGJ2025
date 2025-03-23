@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private Vector3Int cursorPosition;
 
+    private bool hasUsedMonsoon = false;
+
     [SerializeField] GameObject unit1;
     [SerializeField] GameObject unit2;
     [SerializeField] GameObject unit3;
@@ -99,7 +101,7 @@ public class PlayerController : MonoBehaviour
 
         foreach(Unit unit in units)
         {
-            if (unit.transform.position == transform.position)
+            if (unit.transform.position == transform.position & sampleUnit.GetType() != typeof(Monsoon))
             {
                 // if (!sampleUnit.isStackable)
                 // {
@@ -140,8 +142,21 @@ public class PlayerController : MonoBehaviour
         // Check if the player has enough action points
         if (sampleUnit.cost < actionPts)
         {
+            // monsoon can only be used once per game
+            if (sampleUnit.GetType() == typeof(Monsoon))
+            {
+                if (hasUsedMonsoon)
+                {
+                    Debug.Log("Monsoon already used");
+                    return;
+                }
+                else
+                {
+                    hasUsedMonsoon = true;
+                }
+            }
+            // create the unit inplace
             GameObject newObject = Instantiate (obj, transform.position, transform.rotation);
-            Unit unit = newObject.GetComponent<Unit>();
             Debug.Log("Instance created");
             actionPts -= sampleUnit.cost;
         }

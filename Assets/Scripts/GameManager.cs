@@ -72,4 +72,24 @@ public class GameManager : MonoBehaviour
         totalAmmoniac = 0;
         
     }
+
+    public void CleanAllFire()
+    {
+        Fire[] particles = FindObjectsByType<Fire>(FindObjectsSortMode.None);
+
+        foreach (Fire obj in particles)
+        {
+            Destroy(obj);
+        }
+    }
+
+    public void ExtinctAllForest()
+    {
+        Forest[] particles = FindObjectsByType<Forest>(FindObjectsSortMode.None);
+
+        foreach (Forest obj in particles)
+        {
+            obj.Extinguish();
+        }
+    }
 }
