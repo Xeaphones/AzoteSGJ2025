@@ -134,6 +134,7 @@ public class PlayerController : MonoBehaviour
         if (!canSetFire & sampleUnit.GetType() == typeof(Fire))
         {
             Debug.Log("Cannot put fire on non-flamable tile");
+            return;
         }
 
         // Check if the player has enough action points

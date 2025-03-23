@@ -7,6 +7,7 @@ public class Forest : CleaningUnit
     [SerializeField] public float maxHp;
     [SerializeField] public float currentHp = 0;
     [SerializeField] public GameObject firePrefab;
+    [SerializeField] public new Collider2D collider;
     private bool hasFireOn = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -25,6 +26,7 @@ public class Forest : CleaningUnit
         else if (currentHp <= maxHp - 3 & !hasFireOn)
         {
             hasFireOn = true;
+            collider.enabled = false;
             GameObject newFire = Instantiate (firePrefab, transform.position, transform.rotation);
         }
 
@@ -37,8 +39,10 @@ public class Forest : CleaningUnit
         
     }
 
-    void OnTriggerStay2D(Collider2D collision)
+    new void OnTriggerStay2D(Collider2D collision)
     {
+        base.OnTriggerStay2D(collision);
+
         GameObject other = collision.gameObject;
 
         if (other.GetComponent<Fire>() & onFire == false)
@@ -47,11 +51,13 @@ public class Forest : CleaningUnit
             if (other.transform.position == transform.position)
             {
                 hasFireOn = true;
+                collider.enabled = false;
             }
         }
         else if (other.GetComponent<RainCondensator>() & onFire == true)
         {
             onFire = false;
+            collider.enabled = true;
             hasFireOn = false;
             currentHp = maxHp;
         }
