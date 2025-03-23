@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Fire : PollutingUnit
 {
-    [SerializeField] public float duration = 20;
+    [SerializeField] public float duration = 10;
     private Unit source;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     
