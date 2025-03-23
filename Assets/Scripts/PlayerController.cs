@@ -162,8 +162,10 @@ public class PlayerController : MonoBehaviour
             newObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 0f);
 
             if (sampleUnit.isEffect) {
+                newObject.GetComponent<Unit>().tilemap = effectTilemap;
                 effectTilemap.SetTile(cursorPosition, sampleUnit.tile);
             } else {
+                newObject.GetComponent<Unit>().tilemap = groundTilemap;
                 groundTilemap.SetTile(cursorPosition, sampleUnit.tile);
             }
             Debug.Log("Instance created");

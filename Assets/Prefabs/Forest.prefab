@@ -153,6 +153,8 @@ MonoBehaviour:
   isFlamable: 1
   tile: {fileID: 11400000, guid: 7be2268c09ecdee5a857bdd32b715935, type: 2}
   isEffect: 0
+  tilemap: {fileID: 0}
+  defaultTile: {fileID: 11400000, guid: a310635487256c7eca05e370be8a61ea, type: 2}
   onFire: 0
   maxHp: 10
   currentHp: 0

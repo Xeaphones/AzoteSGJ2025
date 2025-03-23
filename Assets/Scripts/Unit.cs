@@ -9,8 +9,11 @@ public abstract class Unit : MonoBehaviour
     [SerializeField] public int cost;
     [SerializeField] public bool isPolluted;
     [SerializeField] public bool isFlamable;
-    [SerializeField] public Tile tile;
+    [SerializeField] public TileBase tile;
+    
     [SerializeField] public bool isEffect;
+    [SerializeField] public Tilemap tilemap;
+    [SerializeField] public Tile defaultTile;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

@@ -1,5 +1,6 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class Fire : PollutingUnit
 {
@@ -18,6 +19,7 @@ public class Fire : PollutingUnit
         {
             Destroy(source);
             Destroy(gameObject);
+            tilemap.SetTile(tilemap.WorldToCell(transform.position), defaultTile);
             Debug.Log("Fire deleted");
         }
         else
