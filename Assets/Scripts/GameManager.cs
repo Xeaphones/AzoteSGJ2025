@@ -5,6 +5,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
+    [SerializeField] PlayerController goodPlayer;
+    [SerializeField] PlayerController badPlayer;
     [SerializeField] int totalAmmoniac;
     [SerializeField] int totalToxicParticles;
     [SerializeField] int maxAmmoniac;
@@ -19,17 +21,17 @@ public class GameManager : MonoBehaviour
     [field: SerializeField] public float leftScreenAxis{get; private set;}
 
     
-    [field: SerializeField] public float screenHeight{get; private set;}
-    [field: SerializeField] public float screenWidth{get; private set;}
+    public float screenHeight;
+    public float screenWidth;
 
     void Awake()
     {
-       if(instance != null)
-       {
+        if(instance != null)
+        {
             Debug.LogError("ERROR : More than one instance of GameManager");
-       } 
+        } 
 
-       instance = this;
+        instance = this;
     }
 
     void Start()
@@ -61,13 +63,30 @@ public class GameManager : MonoBehaviour
     public void CleanAllAmmoniac()
     {
         Particle[] particles = FindObjectsByType<Particle>(FindObjectsSortMode.None);
-
         foreach (Particle obj in particles)
         {
-            Destroy(obj);
+            Destroy(obj.gameObject);
         }
 
         totalAmmoniac = 0;
         
+    }
+
+    public void CleanAllFire()
+    {
+        Fire[] particles = FindObjectsByType<Fire>(FindObjectsSortMode.None);
+        foreach (Fire obj in particles)
+        {
+            Destroy(obj.gameObject);
+        }
+    }
+
+    public void ExtinctAllForest()
+    {
+        Forest[] particles = FindObjectsByType<Forest>(FindObjectsSortMode.None);
+        foreach (Forest obj in particles)
+        {
+            obj.Extinguish();
+        }
     }
 }

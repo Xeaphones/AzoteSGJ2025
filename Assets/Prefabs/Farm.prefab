@@ -65,7 +65,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -79,7 +79,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 3, y: 3}
   m_EdgeRadius: 0
 --- !u!212 &8402713843447614809
 SpriteRenderer:
@@ -148,14 +148,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ee62a860a0146e4a8827b1a93f0d4ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 0
+  cost: 3
   isPolluted: 0
-  isFlamable: 0
+  isFlamable: 1
+  isStackable: 0
   isEmpty: 1
   particlePrefab: {fileID: 7758999282732778041, guid: aeb9a2a6f10a31645b25ad47b95d4ee5, type: 3}
   pollutionGeneration: 2
   pollutionMultiplier: 3
   ticsBeforePollution: 2
+  onFire: 0
+  maxHp: 6
+  currentHp: 0
+  firePrefab: {fileID: 610875758902840658, guid: 7281ef4cf00a3c540bb2d321af97d1f5, type: 3}
 --- !u!50 &3363794440959864093
 Rigidbody2D:
   serializedVersion: 5

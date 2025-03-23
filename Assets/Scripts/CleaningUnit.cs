@@ -23,7 +23,7 @@ public abstract class CleaningUnit : Unit
         
     }
 
-    void OnTriggerStay2D(Collider2D collision)
+    protected void OnTriggerStay2D(Collider2D collision)
     {
         GameObject other = collision.gameObject;
 
