@@ -50,6 +50,7 @@ public class TilemapGenerator : MonoBehaviour
                     groundMap.SetTile(new Vector3Int(-x + width/2, -y + height/2, 0), forestUnit.GetComponent<Unit>().tile);
                     Vector3 position = groundMap.GetCellCenterWorld(new Vector3Int(-x + width/2, -y + height/2, 0));
                     GameObject unit = Instantiate(forestUnit, position, Quaternion.identity);
+                    unit.GetComponent<Unit>().tilemap = groundMap;
                     unit.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 0f);
                 } else {
                     groundMap.SetTile(new Vector3Int(-x + width/2, -y + height/2, 0), emptyTile);
