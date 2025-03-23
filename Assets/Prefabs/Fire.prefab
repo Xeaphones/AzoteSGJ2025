@@ -111,7 +111,7 @@ MonoBehaviour:
   pollutionGeneration: 5
   pollutionMultiplier: 1
   ticsBeforePollution: 1
-  duration: 20
+  duration: 10
 --- !u!61 &-9114062247434631878
 BoxCollider2D:
   m_ObjectHideFlags: 0
