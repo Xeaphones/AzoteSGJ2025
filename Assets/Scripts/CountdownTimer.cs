@@ -10,32 +10,45 @@ public class CountdownTimer : MonoBehaviour
 
     public TMP_Text timerText;
     public GameObject victoryPanel;
+
+    [Header("UI Dynamiques")]
+    public TMP_Text bannerText;
+    public TMP_Text descriptionText;
+    public Image resultImage;
+
+    [Header("Sprites des équipes")]
+    public Sprite sylvestreSprite;
+    public Sprite pollueurSprite;
+
+    [Header("Boutons")]
     public Button newGameButton;
     public Button menuButton;
+
+    private bool hasEnded = false;
 
     void Start()
     {
         timeLeft = totalTime;
 
-        // Cacher le panneau au démarrage
         if (victoryPanel != null)
             victoryPanel.SetActive(false);
 
-        // Lier les boutons
         newGameButton.onClick.AddListener(() => SceneManager.LoadScene("GameScene"));
         menuButton.onClick.AddListener(() => SceneManager.LoadScene("MenuScene"));
     }
 
     void Update()
     {
-        if (timeLeft > 1)
+        if (hasEnded) return;
+
+        if (timeLeft > 1f)
         {
             timeLeft -= Time.deltaTime;
             UpdateTimerDisplay(timeLeft);
         }
         else
         {
-            ShowVictoryPopup();
+            ShowVictoryCleaners();
         }
     }
 
@@ -49,13 +62,32 @@ public class CountdownTimer : MonoBehaviour
         }
     }
 
-    void ShowVictoryPopup()
+    void ShowVictoryCleaners()
     {
-        timeLeft = 0;
+        hasEnded = true;
+        timeLeft = 0f;
 
-        if (victoryPanel != null && !victoryPanel.activeSelf)
+        if (victoryPanel != null)
         {
             victoryPanel.SetActive(true);
+            bannerText.text = "Victory Cleaners";
+            descriptionText.text = "The polluters have lost";
+            resultImage.sprite = sylvestreSprite;
+        }
+    }
+
+    public void PollueursWin()
+    {
+        if (hasEnded) return;
+
+        hasEnded = true;
+
+        if (victoryPanel != null)
+        {
+            victoryPanel.SetActive(true);
+            bannerText.text = "Victoire Pollueurs";
+            descriptionText.text = "The Cleaners have lost";
+            resultImage.sprite = pollueurSprite;
         }
     }
 }
