@@ -9,10 +9,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] PlayerController goodPlayer;
     [SerializeField] PlayerController badPlayer;
     [field: SerializeField] public SoundManager sound{get; private set;}
-    [SerializeField] int totalAmmoniac;
-    [SerializeField] int totalToxicParticles;
-    [SerializeField] int maxAmmoniac;
-    [SerializeField] int maxToxicParticles;
+    [SerializeField] public int totalAmmoniac;
+    [SerializeField] public int totalToxicParticles;
+    [SerializeField] public int maxAmmoniac;
+    [SerializeField] public int maxToxicParticles;
     [SerializeField] int currentActionPointsPolueur = 6;
     [SerializeField] int currentActionPointsCleaner = 7;
     int currentControllerCleaner = 0;

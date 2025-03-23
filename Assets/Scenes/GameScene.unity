@@ -3611,7 +3611,7 @@ MonoBehaviour:
   <sound>k__BackingField: {fileID: 0}
   totalAmmoniac: 0
   totalToxicParticles: 0
-  maxAmmoniac: 0
+  maxAmmoniac: 50
   maxToxicParticles: 20
   currentActionPointsPolueur: 6
   currentActionPointsCleaner: 7
@@ -5296,6 +5296,14 @@ PrefabInstance:
     - target: {fileID: 9124675188242848425, guid: 1e10c48e688054dd5a9523e27871ae92, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9152475011546109937, guid: 1e10c48e688054dd5a9523e27871ae92, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9152475011546109937, guid: 1e10c48e688054dd5a9523e27871ae92, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -402.99902
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

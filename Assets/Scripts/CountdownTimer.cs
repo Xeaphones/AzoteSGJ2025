@@ -41,6 +41,15 @@ public class CountdownTimer : MonoBehaviour
     {
         if (hasEnded) return;
 
+        // Vérifie si les pollueurs ont gagné
+        if (GameManager.instance != null &&
+            GameManager.instance.totalToxicParticles >= GameManager.instance.maxToxicParticles)
+        {
+            ShowVictoryPollueurs();
+            return;
+        }
+
+        // Sinon, continue le timer
         if (timeLeft > 1f)
         {
             timeLeft -= Time.deltaTime;
@@ -76,7 +85,7 @@ public class CountdownTimer : MonoBehaviour
         }
     }
 
-    public void PollueursWin()
+    public void ShowVictoryPollueurs()
     {
         if (hasEnded) return;
 
