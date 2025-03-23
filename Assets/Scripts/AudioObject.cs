@@ -18,6 +18,7 @@ public class AudioObject : MonoBehaviour
         _soundSO = so;
         _audioSource.clip = _soundSO.Clip;
         _audioSource.loop = _soundSO.isLooping;
+        _audioSource.volume = _soundSO.volume;
         _audioSource.Play();
     }
 
