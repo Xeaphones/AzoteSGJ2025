@@ -63,10 +63,9 @@ public class GameManager : MonoBehaviour
     public void CleanAllAmmoniac()
     {
         Particle[] particles = FindObjectsByType<Particle>(FindObjectsSortMode.None);
-
         foreach (Particle obj in particles)
         {
-            Destroy(obj);
+            Destroy(obj.gameObject);
         }
 
         totalAmmoniac = 0;
@@ -76,17 +75,15 @@ public class GameManager : MonoBehaviour
     public void CleanAllFire()
     {
         Fire[] particles = FindObjectsByType<Fire>(FindObjectsSortMode.None);
-
         foreach (Fire obj in particles)
         {
-            Destroy(obj);
+            Destroy(obj.gameObject);
         }
     }
 
     public void ExtinctAllForest()
     {
         Forest[] particles = FindObjectsByType<Forest>(FindObjectsSortMode.None);
-
         foreach (Forest obj in particles)
         {
             obj.Extinguish();

@@ -5,6 +5,7 @@ public class Particle : MonoBehaviour
     [SerializeField] float speed;
     [SerializeField] float offScreenOffset =0.5f;
     [SerializeField] float lifespan;
+    [SerializeField] float conversionChance;
     [SerializeField] Rigidbody2D rb;
 
     void Update()
@@ -26,6 +27,21 @@ public class Particle : MonoBehaviour
         {
             transform.position += new Vector3(0, -GameManager.instance.screenHeight-2*offScreenOffset);
         }   
+
+        // end of life
+        if (lifespan <= 0)
+        {
+            float percent = Random.Range(0f, 100f);
+            if (percent <= conversionChance)
+            {
+                EndLife();
+                Debug.Log("Ammoniac converted to fine matter");
+            }
+        }
+        else
+        {
+            lifespan -= Time.deltaTime;
+        }
     }
 
     public void OnCreation()

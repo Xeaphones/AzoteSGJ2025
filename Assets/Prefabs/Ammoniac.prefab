@@ -105,6 +105,7 @@ MonoBehaviour:
   speed: 2
   offScreenOffset: 0.5
   lifespan: 10
+  conversionChance: 60
   rb: {fileID: -1542242462917661450}
 --- !u!50 &-1542242462917661450
 Rigidbody2D:
