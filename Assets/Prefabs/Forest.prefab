@@ -79,7 +79,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 3, y: 3}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &2319685168302868172
 SpriteRenderer:
@@ -152,6 +152,7 @@ MonoBehaviour:
   isPolluted: 0
   isFlamable: 1
   tile: {fileID: 11400000, guid: 7be2268c09ecdee5a857bdd32b715935, type: 2}
+  isEffect: 0
   onFire: 0
   maxHp: 10
   currentHp: 0
