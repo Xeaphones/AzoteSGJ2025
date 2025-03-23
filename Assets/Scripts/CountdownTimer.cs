@@ -70,8 +70,8 @@ public class CountdownTimer : MonoBehaviour
         if (victoryPanel != null)
         {
             victoryPanel.SetActive(true);
-            bannerText.text = "Victory Cleaners";
-            descriptionText.text = "The polluters have lost";
+            bannerText.text = "Victoire Cleanr";
+            descriptionText.text = "La ville est saine";
             resultImage.sprite = sylvestreSprite;
         }
     }
@@ -85,8 +85,8 @@ public class CountdownTimer : MonoBehaviour
         if (victoryPanel != null)
         {
             victoryPanel.SetActive(true);
-            bannerText.text = "Victoire Pollueurs";
-            descriptionText.text = "The Cleaners have lost";
+            bannerText.text = "Victoire Pollutr";
+            descriptionText.text = "La ville est polluée";
             resultImage.sprite = pollueurSprite;
         }
     }
