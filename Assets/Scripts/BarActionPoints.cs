@@ -12,8 +12,9 @@ public class BarActionPoints : MonoBehaviour {
     public Image[] Images;
     
     public void DrawActionPoints() {
-        if (GameManager.instance.IsUnityNull()) {
-            Debug.LogError("Unity Null");
+        if (GameManager.instance.IsUnityNull())
+        {
+            return;
         }
         
         int currentActionPoints = IsBarCleaner ? GameManager.instance.GetCurrentActionPointsCleaner() : GameManager.instance.GetCurrentActionPointsPolueur();

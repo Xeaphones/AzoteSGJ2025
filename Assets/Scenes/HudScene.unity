@@ -519,19 +519,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b09884394c26d094390f758d4ccd6f6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalAmmoniac: 0
-  totalToxicParticles: 0
+  goodPlayer: {fileID: 0}
+  badPlayer: {fileID: 0}
   maxAmmoniac: 0
   maxToxicParticles: 0
   currentActionPointsPolueur: 6
   currentActionPointsCleaner: 7
+  currentControllerCleaner: A
+  currentControllerPolueur: V
+  currentTerrainPolueur: Foret
+  currentTerrainCleaner: Foret
   <ammoniacToToxicParticleRate>k__BackingField: 0
   <topScreenAxis>k__BackingField: 0
   <downScreenAxis>k__BackingField: 0
   <rightScreenAxis>k__BackingField: 0
   <leftScreenAxis>k__BackingField: 0
-  <screenHeight>k__BackingField: 0
-  <screenWidth>k__BackingField: 0
+  totalAmmoniac: 0
+  totalToxicParticles: 0
+  screenHeight: 0
+  screenWidth: 0
 --- !u!4 &248363574
 Transform:
   m_ObjectHideFlags: 0
@@ -3159,8 +3165,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfec8cf33d7ee48dba213a5ff6ae5443, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isHudPolueur: 0
   controllerText: {fileID: 1019007821}
   controllerImage: {fileID: 2093847379}
+  terrainText: {fileID: 1653005187}
+  terrainImage: {fileID: 1797126451}
 --- !u!1 &1797126449
 GameObject:
   m_ObjectHideFlags: 0

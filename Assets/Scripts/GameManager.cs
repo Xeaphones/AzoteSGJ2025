@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -14,10 +15,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] int maxToxicParticles;
     [SerializeField] int currentActionPointsPolueur = 6;
     [SerializeField] int currentActionPointsCleaner = 7;
-    [SerializeField] string currentControllerCleaner = "A";
-    [SerializeField] string currentControllerPolueur= "V";
-    [SerializeField] string currentTerrainPolueur = "Foret";
-    [SerializeField] string currentTerrainCleaner = "Foret";
+    int currentControllerCleaner = 0;
+    int currentControllerPolueur= 0;
+    string currentTerrainPolueur = "Foret";
+    string currentTerrainCleaner = "Foret";
     
     
     [field: SerializeField] public int ammoniacToToxicParticleRate{get; private set;}
@@ -109,12 +110,12 @@ public class GameManager : MonoBehaviour
         return currentActionPointsCleaner;
     }
     
-    public string GetCurrentControllerPolueur()
+    public int GetCurrentControllerPolueur()
     {
         return currentControllerPolueur;
     }
     
-    public string GetCurrentControllerCleaner()
+    public int GetCurrentControllerCleaner()
     {
         return currentControllerCleaner;
     }
@@ -127,5 +128,19 @@ public class GameManager : MonoBehaviour
     public string GetCurrentTerrainCleaner()
     {
         return currentTerrainCleaner;
+    }
+    
+    void Update()
+    {
+        if(goodPlayer.IsUnityNull() || badPlayer.IsUnityNull())
+        {
+            return;
+        }
+        
+        currentTerrainCleaner = goodPlayer.GetTerrain().name;
+        currentTerrainPolueur = badPlayer.GetTerrain().name;
+        currentControllerCleaner = goodPlayer.currentAction;
+        currentControllerPolueur = badPlayer.currentAction;
+
     }
 }

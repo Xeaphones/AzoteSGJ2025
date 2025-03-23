@@ -94,7 +94,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -610,7 +610,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_20
+      name: Vide
       rect:
         serializedVersion: 2
         x: 0
@@ -632,7 +632,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_21
+      name: Engrais
       rect:
         serializedVersion: 2
         x: 32
@@ -654,7 +654,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_22
+      name: Elevage
       rect:
         serializedVersion: 2
         x: 64
@@ -676,7 +676,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_23
+      name: Industrie
       rect:
         serializedVersion: 2
         x: 96
@@ -698,7 +698,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_24
+      name: Foret
       rect:
         serializedVersion: 2
         x: 128
@@ -720,7 +720,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_25
+      name: Incendie1
       rect:
         serializedVersion: 2
         x: 160
@@ -742,7 +742,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_26
+      name: Cloud1
       rect:
         serializedVersion: 2
         x: 192
@@ -764,7 +764,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_27
+      name: Entonoir
       rect:
         serializedVersion: 2
         x: 224
@@ -786,7 +786,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_28
+      name: BatPluie
       rect:
         serializedVersion: 2
         x: 256
@@ -808,7 +808,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_29
+      name: Incendie2
       rect:
         serializedVersion: 2
         x: 160
@@ -830,7 +830,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_30
+      name: Cloud2
       rect:
         serializedVersion: 2
         x: 192
@@ -1041,6 +1041,17 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+      BatPluie: -36692208
+      Cloud1: -281726258
+      Cloud2: 1919233038
+      Elevage: -695026339
+      Engrais: -1238212487
+      Entonoir: 680211437
+      Foret: -320184772
+      Incendie1: -1731271251
+      Incendie2: 1202832503
+      Industrie: -46917921
+      Vide: 1908961408
       spritesheet_0: 8020143640844766479
       spritesheet_1: -6251682230944352461
       spritesheet_10: 5777552420452043588
@@ -1054,18 +1065,7 @@ TextureImporter:
       spritesheet_18: 195537812
       spritesheet_19: -1080338430
       spritesheet_2: -1259408508766424310
-      spritesheet_20: 1908961408
-      spritesheet_21: -1238212487
-      spritesheet_22: -695026339
-      spritesheet_23: -46917921
-      spritesheet_24: -320184772
-      spritesheet_25: -1731271251
-      spritesheet_26: -281726258
-      spritesheet_27: 680211437
-      spritesheet_28: -36692208
-      spritesheet_29: 1202832503
       spritesheet_3: -5962389079421231736
-      spritesheet_30: 1919233038
       spritesheet_31: 597742892
       spritesheet_32: -82437969
       spritesheet_33: 1989066405
