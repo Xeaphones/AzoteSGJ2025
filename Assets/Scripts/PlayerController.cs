@@ -99,22 +99,31 @@ public class PlayerController : MonoBehaviour
         {
             if (unit.transform.position == transform.position)
             {
-                if (!sampleUnit.isStackable)
+                // if (!sampleUnit.isStackable)
+                // {
+                //     Debug.Log("Cannot put multiple unstackable unit on the same tile");
+                //     return;
+                // }
+                // else if (sampleUnit.GetType() == typeof(Fire) & !unit.isFlamable)
+                // {
+                //     Debug.Log("Cannot put fire : inplace unit is not flamable");
+                //     return;
+                // }
+                // else if (sampleUnit.GetType() == unit.GetType())
+                // {
+                //     Debug.Log("Cannot stack unit on top of same unit type");
+                //     return;
+                // }
+                // break;
+
+                if (sampleUnit.GetType() == typeof(Fire) & unit.isFlamable)
                 {
-                    Debug.Log("Cannot put multiple unstackable unit on the same tile");
-                    return;
+                    continue;
                 }
-                else if (sampleUnit.GetType() == typeof(Fire) & !unit.isFlamable)
+                else
                 {
-                    Debug.Log("Cannot put fire : inplace unit is not flamable");
-                    return;
+                    Debug.Log("Cannot set unit: tile already occupied");
                 }
-                else if (sampleUnit.GetType() == unit.GetType())
-                {
-                    Debug.Log("Cannot stack unit on top of same unit type");
-                    return;
-                }
-                break;
             }
         }
 
