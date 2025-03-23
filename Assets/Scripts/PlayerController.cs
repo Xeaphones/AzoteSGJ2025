@@ -6,9 +6,6 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField]
     private Tilemap groundTilemap;
-    [SerializeField]
-    private Tilemap collisionTilemap;
-
     private PlayerInput playerInput;
     [SerializeField]
     private Vector3Int cursorPosition;
@@ -45,8 +42,13 @@ public class PlayerController : MonoBehaviour
     }
 
     private bool CanMove(Vector2 direction) {
-        Vector3Int gridPosition = groundTilemap.WorldToCell(cursorPosition + new Vector3Int((int)direction.x, (int)direction.y, 0));
-        if (!groundTilemap.HasTile(gridPosition) || collisionTilemap.HasTile(gridPosition)) {
+        // Compute the *new cell position* we want to move to
+        Vector3Int targetCell = cursorPosition 
+            + new Vector3Int((int)direction.x, (int)direction.y, 0);
+        
+        // Now check if groundTilemap has a tile at targetCell
+        // and collisionTilemap does not have one
+        if (!groundTilemap.HasTile(targetCell)){
             return false;
         }
         return true;
