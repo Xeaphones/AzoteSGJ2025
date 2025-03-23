@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1faec5a45f83ef44e8bb78abe39bad36
+guid: 3739754feccdbe14cba64c7fe3f185d6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 274386434698672024
-    second: 560x315_pollution-paris-mars-2012-ressource-ppale-maxppp_0
+      213: 3484779304036253661
+    second: backdrop_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 560x315_pollution-paris-mars-2012-ressource-ppale-maxppp_0
+      name: backdrop_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 493
-        height: 277
+        width: 800
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 89776633201dec300800000000000000
-      internalID: 274386434698672024
+      spriteID: ddfb6b9505c6c5030800000000000000
+      internalID: 3484779304036253661
       vertices: []
       indices: 
       edges: []
@@ -148,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      560x315_pollution-paris-mars-2012-ressource-ppale-maxppp_0: 274386434698672024
+      backdrop_0: 3484779304036253661
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
