@@ -125,7 +125,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -46917921, guid: 21bb858438f5f24c7b4054ce59917407, type: 3}
+  m_Sprite: {fileID: -320184772, guid: 21bb858438f5f24c7b4054ce59917407, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -151,8 +151,7 @@ MonoBehaviour:
   cost: 0
   isPolluted: 0
   isFlamable: 1
-  isStackable: 0
-  isEmpty: 1
+  tile: {fileID: 11400000, guid: 7be2268c09ecdee5a857bdd32b715935, type: 2}
   onFire: 0
   maxHp: 10
   currentHp: 0

@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -695026339, guid: 21bb858438f5f24c7b4054ce59917407, type: 3}
+  m_Sprite: {fileID: -46917921, guid: 21bb858438f5f24c7b4054ce59917407, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -150,7 +150,7 @@ MonoBehaviour:
   cost: 3
   isPolluted: 0
   isFlamable: 0
-  isEmpty: 1
+  tile: {fileID: 11400000, guid: 484c09aefce71c05fb98722efe1c4073, type: 2}
   particlePrefab: {fileID: 7758999282732778041, guid: aeb9a2a6f10a31645b25ad47b95d4ee5, type: 3}
   pollutionGeneration: 3
   pollutionMultiplier: 1

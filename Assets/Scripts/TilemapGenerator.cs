@@ -23,7 +23,7 @@ public class TilemapGenerator : MonoBehaviour
     [SerializeField]
     private Tilemap groundMap;
     [SerializeField]
-    private Tile forestTile;
+    private GameObject forestUnit;
     [SerializeField]
     private Tile emptyTile;
 
@@ -47,7 +47,10 @@ public class TilemapGenerator : MonoBehaviour
         for (int x = 0; x < width; x++) {
             for (int y = 0; y < height; y++) {
                 if (terrainMap[x, y] == 1) {
-                    groundMap.SetTile(new Vector3Int(-x + width/2, -y + height/2, 0), forestTile);
+                    groundMap.SetTile(new Vector3Int(-x + width/2, -y + height/2, 0), forestUnit.GetComponent<Unit>().tile);
+                    Vector3 position = groundMap.GetCellCenterWorld(new Vector3Int(-x + width/2, -y + height/2, 0));
+                    GameObject unit = Instantiate(forestUnit, position, Quaternion.identity);
+                    unit.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 0f);
                 } else {
                     groundMap.SetTile(new Vector3Int(-x + width/2, -y + height/2, 0), emptyTile);
                 }

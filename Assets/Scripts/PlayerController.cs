@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField]
     private Tilemap groundTilemap;
+    [SerializeField]
+    private Tilemap effectTilemap;
     private PlayerInput playerInput;
     [SerializeField]
     private Vector3Int cursorPosition;
@@ -157,6 +159,13 @@ public class PlayerController : MonoBehaviour
             }
             // create the unit inplace
             GameObject newObject = Instantiate (obj, transform.position, transform.rotation);
+            newObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 0f);
+
+            if (sampleUnit.isEffect) {
+                effectTilemap.SetTile(cursorPosition, sampleUnit.tile);
+            } else {
+                groundTilemap.SetTile(cursorPosition, sampleUnit.tile);
+            }
             Debug.Log("Instance created");
             actionPts -= sampleUnit.cost;
         }

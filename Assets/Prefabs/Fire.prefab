@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3641111819644221567}
   - component: {fileID: -9114062247434631878}
   - component: {fileID: 6257204335255374303}
+  - component: {fileID: -5654667228442953610}
   m_Layer: 0
   m_Name: Fire
   m_TagString: Untagged
@@ -79,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -320184772, guid: 21bb858438f5f24c7b4054ce59917407, type: 3}
+  m_Sprite: {fileID: 1919233038, guid: 21bb858438f5f24c7b4054ce59917407, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -104,9 +105,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 0
   isPolluted: 0
-  isFlamable: 0
-  isStackable: 1
-  isEmpty: 1
+  isFlamable: 1
+  tile: {fileID: 11400000, guid: 5f8363e8ceb38590eb4b1e9c768bfc3a, type: 2}
+  isEffect: 1
   particlePrefab: {fileID: 7758999282732778041, guid: aeb9a2a6f10a31645b25ad47b95d4ee5, type: 3}
   pollutionGeneration: 5
   pollutionMultiplier: 1
@@ -185,3 +186,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!95 &-5654667228442953610
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 610875758902840658}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 997a4166a6a4b56a2b929316da8558a6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

@@ -489,6 +489,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groundTilemap: {fileID: 1767680186}
   cursorPosition: {x: 0, y: 0, z: 0}
+  unit1: {fileID: 7926018026391939783, guid: af6ae8d9397bfee4286d4139e7c7346a, type: 3}
+  unit2: {fileID: 4512954725206372726, guid: 1e07eb6caddfe90408973096cbe5f1e3, type: 3}
+  unit3: {fileID: 3973940785125756365, guid: 46bded46772d5f54fa10b657862bea6a, type: 3}
+  unit4: {fileID: 0}
+  maxActionPts: 10
+  actionPts: 10
 --- !u!95 &1063482990
 Animator:
   serializedVersion: 7
@@ -628,6 +634,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groundTilemap: {fileID: 1767680186}
   cursorPosition: {x: 0, y: 0, z: 0}
+  unit1: {fileID: 0}
+  unit2: {fileID: 0}
+  unit3: {fileID: 0}
+  unit4: {fileID: 0}
+  maxActionPts: 10
+  actionPts: 10
 --- !u!212 &1622316738
 SpriteRenderer:
   m_ObjectHideFlags: 0
