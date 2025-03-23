@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+susing System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -7,6 +7,9 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] PlayerController goodPlayer;
     [SerializeField] PlayerController badPlayer;
+    [field: SerializeField] public SoundManager sound{get; private set;}
+    [SerializeField] int totalAmmoniac;
+    [SerializeField] int totalToxicParticles;
     [SerializeField] int maxAmmoniac;
     [SerializeField] int maxToxicParticles;
     [field: SerializeField] public int ammoniacToToxicParticleRate{get; private set;}
