@@ -28,6 +28,11 @@ public class Fire : PollutingUnit
         }
     }
 
+    void OnDestroy()
+    {
+        tilemap.SetTile(tilemap.WorldToCell(transform.position), defaultTile);
+    }
+
     void OnTriggerStay2D(Collider2D collision)
     {
         GameObject other = collision.gameObject;

@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class BarActionPoints : MonoBehaviour {
     
+    [SerializeField] PlayerController player;
     public bool IsBarCleaner = false;
     public Sprite actionPointSprite;
     public Sprite noActionPointSprite;
@@ -17,7 +18,7 @@ public class BarActionPoints : MonoBehaviour {
             return;
         }
         
-        int currentActionPoints = IsBarCleaner ? GameManager.instance.GetCurrentActionPointsCleaner() : GameManager.instance.GetCurrentActionPointsPolueur();
+        int currentActionPoints = (int)player.actionPts;
         for (int i = 0; i < Images.Length; i++) {
             if (i < currentActionPoints) {
                 // Images[i].sprite = circleSprite;

@@ -44,9 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cc1b466a419953438e033f999271b72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 1
+  cost: 9
   isPolluted: 0
   isFlamable: 0
-  isStackable: 0
-  isEmpty: 1
-  manager: {fileID: 0}
+  tile: {fileID: 0}
+  isEffect: 0
+  tilemap: {fileID: 0}
+  defaultTile: {fileID: 0}

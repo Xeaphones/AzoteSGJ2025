@@ -103,7 +103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cb927a2a5b98af4c97ce28cdfb722fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 0
+  cost: 2
   isPolluted: 0
   isFlamable: 1
   tile: {fileID: 11400000, guid: a7a520316f79ba80caa425335242ed74, type: 2}

@@ -148,11 +148,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb4e89d75af211e42b86932591f3fac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 0
+  cost: 3
   isPolluted: 0
   isFlamable: 0
   tile: {fileID: 11400000, guid: 7ba0fb1c87ea9edba9b2aae764e5f738, type: 2}
   isEffect: 0
+  tilemap: {fileID: 0}
+  defaultTile: {fileID: 0}
 --- !u!50 &840125378134155683
 Rigidbody2D:
   serializedVersion: 5

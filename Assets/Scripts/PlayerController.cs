@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.InputSystem;
 using UnityEditor.Compilation;
+using UnityEngine.Analytics;
 
 public class PlayerController : MonoBehaviour
 {
@@ -20,7 +21,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] GameObject unit3;
     [SerializeField] GameObject unit4;
     [SerializeField] public int maxActionPts; 
-    [SerializeField] private float actionPts;
+    [SerializeField] public float actionPts;
 
     public int currentAction;
     
@@ -164,15 +165,23 @@ public class PlayerController : MonoBehaviour
             }
             // create the unit inplace
             GameObject newObject = Instantiate (obj, transform.position, transform.rotation);
-            newObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 0f);
 
-            if (sampleUnit.isEffect) {
-                newObject.GetComponent<Unit>().tilemap = effectTilemap;
-                effectTilemap.SetTile(cursorPosition, sampleUnit.tile);
-            } else {
-                newObject.GetComponent<Unit>().tilemap = groundTilemap;
-                groundTilemap.SetTile(cursorPosition, sampleUnit.tile);
+            if (sampleUnit.GetType() == typeof(Monsoon))
+            {
+                // rien
             }
+            else
+            {
+                newObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 0f);
+                if (sampleUnit.isEffect) {
+                    newObject.GetComponent<Unit>().tilemap = effectTilemap;
+                    effectTilemap.SetTile(cursorPosition, sampleUnit.tile);
+                } else {
+                    newObject.GetComponent<Unit>().tilemap = groundTilemap;
+                    groundTilemap.SetTile(cursorPosition, sampleUnit.tile);
+                }
+            }
+            
             Debug.Log("Instance created");
             actionPts -= sampleUnit.cost;
         }

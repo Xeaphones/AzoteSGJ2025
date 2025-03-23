@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38a4319f0157ecc49a5fc6e7e1672251, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 0
+  cost: 1
   isPolluted: 0
   isFlamable: 1
   tile: {fileID: 11400000, guid: 7be2268c09ecdee5a857bdd32b715935, type: 2}
@@ -160,6 +160,7 @@ MonoBehaviour:
   currentHp: 0
   firePrefab: {fileID: 610875758902840658, guid: 7281ef4cf00a3c540bb2d321af97d1f5, type: 3}
   collider: {fileID: 5249365566026374373}
+  effectTilemap: {fileID: 0}
 --- !u!50 &-2805617612149410074
 Rigidbody2D:
   serializedVersion: 5

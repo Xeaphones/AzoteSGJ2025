@@ -189,11 +189,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e49d931833f2d5478cb4b1c988da34d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 0
+  cost: 4
   isPolluted: 0
   isFlamable: 0
   tile: {fileID: 11400000, guid: a3cbb3c47e5b92cbebe1a560dbedfc43, type: 2}
   isEffect: 0
+  tilemap: {fileID: 0}
+  defaultTile: {fileID: 0}
   isActive: 0
   timer: 0
   firstRainStartDelay: 1.5
