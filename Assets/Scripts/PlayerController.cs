@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] public int maxActionPts; 
     [SerializeField] private float actionPts;
 
+    public int currentAction;
     
     void Awake()
     {
@@ -78,19 +79,23 @@ public class PlayerController : MonoBehaviour
     private void OnAbility1(InputValue value)
     {
         CreateUnit(unit1);
+        currentAction = 1;
     }
 
     private void OnAbility2(InputValue value)
     {
         CreateUnit(unit2);
+        currentAction = 2;
     }
     private void OnAbility3(InputValue value)
     {
         CreateUnit(unit3);
+        currentAction = 3;
     }
     private void OnAbility4(InputValue value)
     {
         CreateUnit(unit4);
+        currentAction = 4;
     }
 
     private void CreateUnit(GameObject obj)
@@ -177,4 +182,15 @@ public class PlayerController : MonoBehaviour
             Debug.Log(actionPts);
         }
     }
+    
+    public Vector3Int GetCursorPosition()
+    {
+        return cursorPosition;
+    }
+    
+    public TileBase GetTerrain()
+    {
+        return groundTilemap.GetTile(cursorPosition);
+    }
+    
 }

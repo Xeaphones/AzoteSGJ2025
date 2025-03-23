@@ -1,29 +1,29 @@
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor.UI;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class BarActionPoints : MonoBehaviour {
     
-    public Sprite crossSprite;
-    public Sprite circleSprite;
-    private int maxActionPoints = 15;
-    private int currentActionPoints = 7;
+    public bool IsBarCleaner = false;
+    public Sprite actionPointSprite;
+    public Sprite noActionPointSprite;
     public Image[] Images;
-    private Sprite FULLHD;
     
-    
-    public void UpdateActionPoints(int points) {
-        currentActionPoints = points;
-    }
-
     public void DrawActionPoints() {
+        if (GameManager.instance.IsUnityNull())
+        {
+            return;
+        }
+        
+        int currentActionPoints = IsBarCleaner ? GameManager.instance.GetCurrentActionPointsCleaner() : GameManager.instance.GetCurrentActionPointsPolueur();
         for (int i = 0; i < Images.Length; i++) {
             if (i < currentActionPoints) {
                 // Images[i].sprite = circleSprite;
-                Images[i].sprite = circleSprite;
+                Images[i].sprite = actionPointSprite;
             } else {
-                Images[i].sprite = crossSprite;
+                Images[i].sprite = noActionPointSprite;
             }
         }
     }
@@ -31,9 +31,7 @@ public class BarActionPoints : MonoBehaviour {
     
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        FULLHD = Resources.Load<Sprite>("FULLHD");
+    void Start() {
     }
 
     // Update is called once per frame

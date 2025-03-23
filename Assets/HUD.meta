@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 9aa1d6c818b4f470e9f01ab4ce5d2f0e
+=======
+guid: e9a714e51e06846779e1fc4bbd1dd30a
+>>>>>>> a2ff7c0 (hud fini (sauf barres particules fines et NH3), TODO: lier la manette et les information du terrain dans le GameManager)
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
