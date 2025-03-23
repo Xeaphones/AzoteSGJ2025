@@ -95,6 +95,8 @@ public class PlayerController : MonoBehaviour
         
         // Check that there are no incompatble unit on the current tile
         Unit[] units = FindObjectsByType<Unit>(FindObjectsSortMode.None);
+        bool canSetFire = false;
+
         foreach(Unit unit in units)
         {
             if (unit.transform.position == transform.position)
@@ -118,13 +120,20 @@ public class PlayerController : MonoBehaviour
 
                 if (sampleUnit.GetType() == typeof(Fire) & unit.isFlamable)
                 {
-                    continue;
+                    canSetFire = true;
+                    break;
                 }
                 else
                 {
                     Debug.Log("Cannot set unit: tile already occupied");
+                    return;
                 }
             }
+        }
+
+        if (!canSetFire & sampleUnit.GetType() == typeof(Fire))
+        {
+            Debug.Log("Cannot put fire on non-flamable tile");
         }
 
         // Check if the player has enough action points
