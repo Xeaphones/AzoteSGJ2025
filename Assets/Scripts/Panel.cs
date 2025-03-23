@@ -39,23 +39,23 @@ public class Panel : MonoBehaviour
         // Le chemin des images est Assets/Resources/Images/Hud
         Dictionary<int, (string, Sprite)> infoControllerPolueur = new Dictionary<int, (string, Sprite)>
         {
-            { 3, ("Industrie: Creer une industrie", Resources.Load<Sprite>("Images/Hud/boutons-pollutr-A")) },
-            { 2, ("Feu: creer une industrie", Resources.Load<Sprite>("Images/Hud/boutons-pollutr-B")) },
-            { 4, ("X: Creer une industrie", Resources.Load<Sprite>("Images/Hud/boutons-pollutr-X")) },
-            { 1, ("Y: Creer une industrie", Resources.Load<Sprite>("Images/Hud/boutons-pollutr-Y")) },
+            { 3, ("Champ: Crée de l’ammoniac (plus efficace pendant le printemps et l’automne)", Resources.Load<Sprite>("Images/Hud/boutons-pollutr-A")) },
+            { 2, ("Elevage intensif: Crée de l’ammoniac (plus efficace pendant l’été)", Resources.Load<Sprite>("Images/Hud/boutons-pollutr-B")) },
+            { 4, ("Usine: Crée de l’ammoniac de manière constante", Resources.Load<Sprite>("Images/Hud/boutons-pollutr-X")) },
+            { 1, ("Elevage intensif: Crée de l’ammoniac (plus efficace pendant l’été)", Resources.Load<Sprite>("Images/Hud/boutons-pollutr-Y")) },
         };
         Dictionary<int, (string, Sprite)> infoControllerCleaner = new Dictionary<int, (string, Sprite)>
         {
-            { 3, ("A: Creer une industrie", Resources.Load<Sprite>("Images/Hud/boutons-cleanr-A")) },
-            { 2, ("B: Creer une industrie", Resources.Load<Sprite>("Images/Hud/boutons-cleanr-B")) },
-            { 4, ("X: Creer une industrie", Resources.Load<Sprite>("Images/Hud/boutons-cleanr-X")) },
-            { 1, ("Y: Creer une industrie", Resources.Load<Sprite>("Images/Hud/boutons-cleanr-Y")) },
+            { 3, ("Forêt: Élimine l’ammoniac entrant au contact", Resources.Load<Sprite>("Images/Hud/boutons-cleanr-A")) },
+            { 2, ("Entonnoir : Élimine l’ammoniac entrant dans les cellules adjacentes", Resources.Load<Sprite>("Images/Hud/boutons-cleanr-B")) },
+            { 4, ("Condensateur de pluie: Crée de la pluie qui élimine l’ammoniac et éteint les feux", Resources.Load<Sprite>("Images/Hud/boutons-cleanr-X")) },
+            { 1, ("Mousson: Supprime tout l’ammoniac et les feux de la carte. USAGE UNIQUE", Resources.Load<Sprite>("Images/Hud/boutons-cleanr-Y")) },
         };
         
         currentControllerInfo = isHudPolueur ? infoControllerPolueur : infoControllerCleaner;
 
         infoTerrain = new Dictionary<string, (string, Sprite)>{
-            {"Vide", ("Rien de particulier", Resources.Load<Sprite>("Images/Hud/Vide"))},
+            {"Vide", ("Aucun effet", Resources.Load<Sprite>("Images/Hud/Vide"))},
             {"Foret", ("élimine les particules au contact", Resources.Load<Sprite>("Images/Hud/Foret"))},
             {"BatPluie", ("Crée de la pluie qui élimine l’ammoniac et éteint les feux", Resources.Load<Sprite>("Images/Hud/BatPluie"))},
             {"Cloud1", ("Nuage", Resources.Load<Sprite>("Images/Hud/Cloud1"))},
