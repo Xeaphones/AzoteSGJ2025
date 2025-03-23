@@ -222,7 +222,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      capa-aspi_0: 4353701371343032821
+      capa-aspi_1: 1298138509682935128
+      capa-aspi_2: 5733621019741408458
+      capa-aspi_3: 3219604038590193962
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

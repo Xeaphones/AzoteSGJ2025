@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      capa-arbres_0: -5522456260576876904
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

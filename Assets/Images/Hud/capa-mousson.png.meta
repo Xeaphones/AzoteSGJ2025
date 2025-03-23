@@ -247,7 +247,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      capa-mousson_0: 893506344062301468
+      capa-mousson_1: -2977805388842712755
+      capa-mousson_2: -5843816658439435242
+      capa-mousson_3: 297290451252718776
+      capa-mousson_4: 4478329402947307224
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

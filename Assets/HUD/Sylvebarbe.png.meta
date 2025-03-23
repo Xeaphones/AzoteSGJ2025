@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Sylvebarbe_0: 2446546313968623662
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
