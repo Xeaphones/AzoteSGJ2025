@@ -1028,10 +1028,10 @@ MonoBehaviour:
   groundTilemap: {fileID: 1035435504}
   effectTilemap: {fileID: 895310417}
   cursorPosition: {x: 0, y: 0, z: 0}
-  unit1: {fileID: 6338780743675758651, guid: 153612a98ce42aa41a7366750329f2ab, type: 3}
+  unit1: {fileID: 461374201309147091, guid: 573e0450d6aa69744a9e0a8c1269a86e, type: 3}
   unit2: {fileID: 7452438507494470998, guid: e3a665c968db450429267fb4eeeb0453, type: 3}
   unit3: {fileID: 7926018026391939783, guid: af6ae8d9397bfee4286d4139e7c7346a, type: 3}
-  unit4: {fileID: 461374201309147091, guid: 573e0450d6aa69744a9e0a8c1269a86e, type: 3}
+  unit4: {fileID: 6338780743675758651, guid: 153612a98ce42aa41a7366750329f2ab, type: 3}
   maxActionPts: 10
   actionPts: 10
   currentAction: 0
@@ -4442,7 +4442,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ea615e95f3faac4f866b0ba2882e5e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalTime: 5
+  totalTime: 60
   timerText: {fileID: 1238556605}
   victoryPanel: {fileID: 1907579785}
   bannerText: {fileID: 1340415828}
@@ -4548,8 +4548,8 @@ MonoBehaviour:
   groundTilemap: {fileID: 1035435504}
   effectTilemap: {fileID: 895310417}
   cursorPosition: {x: 0, y: 0, z: 0}
-  unit1: {fileID: 4512954725206372726, guid: 1e07eb6caddfe90408973096cbe5f1e3, type: 3}
-  unit2: {fileID: 3973940785125756365, guid: 46bded46772d5f54fa10b657862bea6a, type: 3}
+  unit1: {fileID: 3973940785125756365, guid: 46bded46772d5f54fa10b657862bea6a, type: 3}
+  unit2: {fileID: 4512954725206372726, guid: 1e07eb6caddfe90408973096cbe5f1e3, type: 3}
   unit3: {fileID: 5673424636200955460, guid: 7a030ce88cf65b14281cefe95342cf5a, type: 3}
   unit4: {fileID: 610875758902840658, guid: 7281ef4cf00a3c540bb2d321af97d1f5, type: 3}
   maxActionPts: 10
@@ -5193,6 +5193,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7885442189773662898, guid: 1e10c48e688054dd5a9523e27871ae92, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 709923291}
     - target: {fileID: 7997120672820848382, guid: 1e10c48e688054dd5a9523e27871ae92, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -5241,6 +5245,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8445626738942437265, guid: 1e10c48e688054dd5a9523e27871ae92, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1639645155}
     - target: {fileID: 8671139099749280810, guid: 1e10c48e688054dd5a9523e27871ae92, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
