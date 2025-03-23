@@ -7,6 +7,9 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] PlayerController goodPlayer;
     [SerializeField] PlayerController badPlayer;
+    [field: SerializeField] public SoundManager sound{get; private set;}
+    [SerializeField] int totalAmmoniac;
+    [SerializeField] int totalToxicParticles;
     [SerializeField] int maxAmmoniac;
     [SerializeField] int maxToxicParticles;
     [field: SerializeField] public int ammoniacToToxicParticleRate{get; private set;}
@@ -18,8 +21,6 @@ public class GameManager : MonoBehaviour
     [field: SerializeField] public float rightScreenAxis{get; private set;}
     [field: SerializeField] public float leftScreenAxis{get; private set;}
 
-    public int totalAmmoniac;
-    public int totalToxicParticles;
     public float screenHeight;
     public float screenWidth;
 
