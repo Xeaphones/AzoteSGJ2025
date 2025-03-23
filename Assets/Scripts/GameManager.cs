@@ -12,6 +12,14 @@ public class GameManager : MonoBehaviour
     [SerializeField] int totalToxicParticles;
     [SerializeField] int maxAmmoniac;
     [SerializeField] int maxToxicParticles;
+    [SerializeField] int currentActionPointsPolueur = 6;
+    [SerializeField] int currentActionPointsCleaner = 7;
+    [SerializeField] string currentControllerCleaner = "A";
+    [SerializeField] string currentControllerPolueur= "V";
+    [SerializeField] string currentTerrainPolueur = "Foret";
+    [SerializeField] string currentTerrainCleaner = "Foret";
+    
+    
     [field: SerializeField] public int ammoniacToToxicParticleRate{get; private set;}
     
 
@@ -63,9 +71,10 @@ public class GameManager : MonoBehaviour
     public void CleanAllAmmoniac()
     {
         Particle[] particles = FindObjectsByType<Particle>(FindObjectsSortMode.None);
+
         foreach (Particle obj in particles)
         {
-            Destroy(obj.gameObject);
+            Destroy(obj);
         }
 
         totalAmmoniac = 0;
@@ -88,5 +97,35 @@ public class GameManager : MonoBehaviour
         {
             obj.Extinguish();
         }
+    }
+    
+    public int GetCurrentActionPointsPolueur()
+    {
+        return currentActionPointsPolueur;
+    }
+    
+    public int GetCurrentActionPointsCleaner()
+    {
+        return currentActionPointsCleaner;
+    }
+    
+    public string GetCurrentControllerPolueur()
+    {
+        return currentControllerPolueur;
+    }
+    
+    public string GetCurrentControllerCleaner()
+    {
+        return currentControllerCleaner;
+    }
+    
+    public string GetCurrentTerrainPolueur()
+    {
+        return currentTerrainPolueur;
+    }
+    
+    public string GetCurrentTerrainCleaner()
+    {
+        return currentTerrainCleaner;
     }
 }
