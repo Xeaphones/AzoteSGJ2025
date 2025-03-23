@@ -5707,15 +5707,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goodPlayer: {fileID: 709923291}
   badPlayer: {fileID: 1639645155}
-  totalAmmoniac: 0
-  totalToxicParticles: 0
-  maxAmmoniac: 20
+  maxAmmoniac: 0
   maxToxicParticles: 20
   <ammoniacToToxicParticleRate>k__BackingField: 10
-  <topScreenAxis>k__BackingField: 0
-  <downScreenAxis>k__BackingField: 0
-  <rightScreenAxis>k__BackingField: 0
-  <leftScreenAxis>k__BackingField: 0
+  <topScreenAxis>k__BackingField: 5
+  <downScreenAxis>k__BackingField: -5
+  <rightScreenAxis>k__BackingField: 4
+  <leftScreenAxis>k__BackingField: -4
+  totalAmmoniac: 0
+  totalToxicParticles: 0
   screenHeight: 4
   screenWidth: 3
 --- !u!4 &1117062563
