@@ -4442,7 +4442,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ea615e95f3faac4f866b0ba2882e5e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalTime: 5
+  totalTime: 60
   timerText: {fileID: 1238556605}
   victoryPanel: {fileID: 1907579785}
   bannerText: {fileID: 1340415828}
