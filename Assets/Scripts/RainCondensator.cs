@@ -57,6 +57,7 @@ public class RainCondensator : CleaningUnit
 
     void ActivateRain()
     {
+        GameManager.instance.sound.PlayRainSound();
         isActive = true;
         clouds.SetActive(true);
         collider.enabled = true;

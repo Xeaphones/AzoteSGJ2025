@@ -12,6 +12,7 @@ public class Farm : PollutingUnit
     void Start()
     {
         currentHp = maxHp;
+        GameManager.instance.sound.PlayFarmSound();
     }
 
     new void Update()

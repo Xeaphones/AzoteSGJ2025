@@ -9,7 +9,7 @@ public class Fire : PollutingUnit
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        GameManager.instance.sound.PlayFireSound();
     }
 
     new void Update()

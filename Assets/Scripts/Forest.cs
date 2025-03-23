@@ -17,6 +17,7 @@ public class Forest : CleaningUnit
     {
         currentHp = maxHp;
         effectTilemap = GameObject.Find("Effect").GetComponent<Tilemap>();
+        GameManager.instance.sound.PlayForestSound();
     }
 
     new void Update()

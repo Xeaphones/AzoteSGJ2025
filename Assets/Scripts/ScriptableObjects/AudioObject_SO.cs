@@ -5,4 +5,5 @@ public class AudioObject_SO : ScriptableObject
 {
     public AudioClip Clip;
     public bool isLooping;
+    public float volume = 0.5f;
 }
