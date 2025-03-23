@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 2e82fd0095dea43a4b7aacdae64f69b1
+guid: 6699397ac2f1fb8458dc9fd71e583ea4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8812563031036136265
-    second: capa-usine_0
-  - first:
-      213: -4054469049528779475
-    second: capa-usine_1
+      213: 7725100516240798145
+    second: banderole_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -99,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: capa-usine_0
+      name: banderole_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 0
-        width: 26
-        height: 23
+        x: 34
+        y: 29
+        width: 452
+        height: 82
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,30 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7b4f95e3d9c73b580800000000000000
-      internalID: -8812563031036136265
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: capa-usine_1
-      rect:
-        serializedVersion: 2
-        x: 7
-        y: 21
-        width: 24
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d2d750681e1abb7c0800000000000000
-      internalID: -4054469049528779475
+      spriteID: 1c138bc7df1153b60800000000000000
+      internalID: 7725100516240798145
       vertices: []
       indices: 
       edges: []
@@ -173,8 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      capa-usine_0: -8812563031036136265
-      capa-usine_1: -4054469049528779475
+      banderole_0: 7725100516240798145
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      capa-pluie_0: 1326951743649226738
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

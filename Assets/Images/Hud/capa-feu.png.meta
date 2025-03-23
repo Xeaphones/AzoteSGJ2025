@@ -197,7 +197,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      capa-feu_0: -2772395529486854566
+      capa-feu_1: 1594193054814499508
+      capa-feu_2: -6650197469283697782
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
