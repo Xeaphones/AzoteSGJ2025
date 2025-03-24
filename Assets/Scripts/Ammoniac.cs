@@ -7,6 +7,8 @@ public class Particle : MonoBehaviour
     [SerializeField] float lifespan;
     [SerializeField] float conversionChance;
     [SerializeField] Rigidbody2D rb;
+    [SerializeField] GameObject cleanParticle;
+    [SerializeField] GameObject deathParticle;
 
     void Update()
     {
@@ -46,13 +48,15 @@ public class Particle : MonoBehaviour
 
     public void OnCreation()
     {
-        rb.linearVelocity = Random.insideUnitCircle.normalized*speed;
+        rb.linearVelocity = Random.insideUnitCircle.normalized*speed*Random.Range(0.3f ,1f);
         GameManager.instance.AddAmmoniac(1);
     }
 
     public void EndLife()
     {
         //Ajouter des particules fines
+        GameObject newParticle = GameObject.Instantiate(deathParticle, rb.position, Quaternion.identity);
+        newParticle.GetComponent<ParticleSystem>().Play();
         GameManager.instance.RemoveAmmoniac(1);
         GameManager.instance.AddToxicParticles(GameManager.instance.ammoniacToToxicParticleRate);
         Destroy(gameObject);
@@ -60,6 +64,8 @@ public class Particle : MonoBehaviour
 
     public void Delete()
     {
+        GameObject newParticle = GameObject.Instantiate(cleanParticle, rb.position, Quaternion.identity);
+        newParticle.GetComponent<ParticleSystem>().Play();
         GameManager.instance.RemoveAmmoniac(1);
         Destroy(gameObject);
     }

@@ -103,10 +103,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  offScreenOffset: 0.5
-  lifespan: 10
-  conversionChance: 60
+  offScreenOffset: 0.1
+  lifespan: 6
+  conversionChance: 80
   rb: {fileID: -1542242462917661450}
+  cleanParticle: {fileID: 2372299579178172296, guid: 19f3024514d31e1408d53680f78a088b, type: 3}
+  deathParticle: {fileID: 1647111979427542923, guid: 42d74e688d43a724e8b89742cd6d8d1a, type: 3}
 --- !u!50 &-1542242462917661450
 Rigidbody2D:
   serializedVersion: 5

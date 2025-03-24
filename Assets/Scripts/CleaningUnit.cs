@@ -29,7 +29,8 @@ public abstract class CleaningUnit : Unit
 
         if (collision.gameObject.GetComponent<Particle>())
         {
-            Destroy(other);
+            collision.gameObject.GetComponent<Particle>().Delete();
+            //Destroy(other);
             Debug.Log("Ammoniac destroy");
         }
     }

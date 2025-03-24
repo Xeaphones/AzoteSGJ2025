@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -32,6 +33,9 @@ public class GameManager : MonoBehaviour
 
     public float screenHeight;
     public float screenWidth;
+
+
+    [SerializeField] GameObject monsoonVisual;
 
     void Awake()
     {
@@ -75,7 +79,8 @@ public class GameManager : MonoBehaviour
         Debug.Log("Cleaned all ammoniac");
         foreach (Particle obj in particles)
         {
-            Destroy(obj.gameObject);
+            obj.Delete();
+            //Destroy(obj.gameObject);
         }
 
         totalAmmoniac = 0;
@@ -145,5 +150,17 @@ public class GameManager : MonoBehaviour
         currentControllerCleaner = goodPlayer.currentAction;
         currentControllerPolueur = badPlayer.currentAction;
 
+    }
+
+    public void StartMonsoon()
+    {
+        monsoonVisual.SetActive(true);
+        StartCoroutine(removeMonsoon());
+    }
+
+    IEnumerator removeMonsoon()
+    {
+        yield return new WaitForSeconds(1f);
+        monsoonVisual.SetActive(false);
     }
 }

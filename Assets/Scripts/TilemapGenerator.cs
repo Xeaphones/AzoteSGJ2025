@@ -68,13 +68,13 @@ public class TilemapGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)) {
-            doSim(numR);
-        }
+        // if (Input.GetMouseButtonDown(0)) {
+        //     doSim(numR);
+        // }
 
-        if (Input.GetMouseButtonDown(1)) {
-            clearMap(true);
-        }
+        // if (Input.GetMouseButtonDown(1)) {
+        //     clearMap(true);
+        // }
     }
 
     private int[,] genTilePos(int[,] oldMap) {

@@ -175,7 +175,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 5, y: 5}
+  m_Size: {x: 2.9, y: 2.9}
   m_EdgeRadius: 0
 --- !u!114 &2652588980301711309
 MonoBehaviour:
@@ -189,7 +189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e49d931833f2d5478cb4b1c988da34d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 4
+  cost: 6
   isPolluted: 0
   isFlamable: 0
   tile: {fileID: 11400000, guid: a3cbb3c47e5b92cbebe1a560dbedfc43, type: 2}
@@ -200,7 +200,7 @@ MonoBehaviour:
   timer: 0
   firstRainStartDelay: 1.5
   rainDuration: 2
-  rainCooldown: 4
+  rainCooldown: 8
   collider: {fileID: 3196394876596387469}
   clouds: {fileID: 5184089468045302295}
 --- !u!50 &6089655699708274985

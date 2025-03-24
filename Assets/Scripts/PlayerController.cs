@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.InputSystem;
-using UnityEditor.Compilation;
+//using UnityEditor.Compilation;
 using UnityEngine.Analytics;
 
 public class PlayerController : MonoBehaviour
@@ -160,6 +160,7 @@ public class PlayerController : MonoBehaviour
                 }
                 else
                 {
+                    GameManager.instance.StartMonsoon();
                     hasUsedMonsoon = true;
                 }
             }
